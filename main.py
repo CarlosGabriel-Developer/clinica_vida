@@ -18,7 +18,20 @@ print('[5] SAIR')
 
 print ("-"*40)
 
-usuario_escolha = int(input('ESCOLHA UMA OPÇÃO: '))
+usuario_escolha = int(input('ESCOLHA UMA OPÇÃO ENTRE 1 - 5 : '))
+
+if usuario_escolha == 1 : 
+    
+    print('=== CADASTRAR PACIENTE ===')
+    print ("-"*40)
+    
+    paciente['Nome'] = str(input('NOME DO PACIENTE: ')).upper()
+    
+    paciente['Idade'] = int(input('ANO DE NACIMENTO DO PACIENTE: '))
+    
+    paciente['Telefone'] = str(input('TELEFONE (DDD) XXXXX-XXXX: '))
+    
+    
 
 while True : 
     

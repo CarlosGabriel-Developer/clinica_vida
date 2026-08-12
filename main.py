@@ -4,9 +4,6 @@ ano_atual = datetime.today().year
 
 banco_dados_pacientes = []
 
-paciente = {}
-
-
 print ("-"*40)
 
 print("=== SISTEMA CLÍNICA VIDA+ ===")
@@ -22,17 +19,34 @@ usuario_escolha = int(input('ESCOLHA UMA OPÇÃO ENTRE 1 - 5 : '))
 
 if usuario_escolha == 1 : 
     
+    paciente = {}
+
     print('=== CADASTRAR PACIENTE ===')
     print ("-"*40)
-    
+
     paciente['Nome'] = str(input('NOME DO PACIENTE: ')).upper()
     
-    paciente['Idade'] = int(input('ANO DE NACIMENTO DO PACIENTE: '))
+    while True : 
     
+        paciente_ano_nacimento = int(input('ANO DE NACIMENTO DO PACIENTE: '))
+        
+        idade = paciente_ano_nacimento - datetime.today().year
+        
+        if 0 <= idade <= 120 : 
+            paciente['Idade'] = idade
+            break
+        
+        else : 
+            print('ANO DE NASCIMENTO INVÁLIDO')
+        
     paciente['Telefone'] = str(input('TELEFONE (DDD) XXXXX-XXXX: '))
+        
+    banco_dados_pacientes.append(paciente)
     
+    print('PACIENTE CADASTRADO COM SUCESSO')
     
-
+    print ("-"*40)
+    
 while True : 
     
     cadastrar_paciente = str(input("Deseja continuar [S/N]: "))

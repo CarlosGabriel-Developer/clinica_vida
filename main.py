@@ -30,7 +30,7 @@ if usuario_escolha == 1 :
     
         paciente_ano_nacimento = int(input('ANO DE NACIMENTO DO PACIENTE: '))
         
-        idade = paciente_ano_nacimento - datetime.today().year
+        idade = datetime.today().year - paciente_ano_nacimento
         
         if 0 <= idade <= 120 : 
             paciente['Idade'] = idade

@@ -15,9 +15,9 @@ print('[5] SAIR')
 
 print ("-"*40)
 
-usuario_escolha = int(input('ESCOLHA UMA OPÇÃO ENTRE 1 - 5 : '))
+usuario_escolha = str(input('ESCOLHA UMA OPÇÃO ENTRE 1 - 5 : '))
 
-if usuario_escolha == 1 : 
+if usuario_escolha == "1" : 
     
     paciente = {}
 
@@ -46,6 +46,15 @@ if usuario_escolha == 1 :
     print('PACIENTE CADASTRADO COM SUCESSO')
     
     print ("-"*40)
+    
+elif usuario_escolha == '2':
+    
+    numero_pacientes_cadastrados = 0 
+    
+    for i in banco_dados_pacientes :
+        numero_pacientes_cadastrados += 1
+        
+        
     
 while True : 
     

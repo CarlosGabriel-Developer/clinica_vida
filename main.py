@@ -49,12 +49,18 @@ if usuario_escolha == "1" :
     
 elif usuario_escolha == '2':
     
-    numero_pacientes_cadastrados = 0 
-    
-    for i in banco_dados_pacientes :
-        numero_pacientes_cadastrados += 1
-        
-        
+    numero_pacientes_cadastrados = 0
+    paciente_mais_novo = None
+    paciente_mais_velho = None
+
+for paciente in banco_dados_pacientes:
+    numero_pacientes_cadastrados += 1
+
+    if paciente_mais_velho is None or paciente['Idade'] > paciente_mais_velho:
+        paciente_mais_velho = paciente['Idade']
+
+    if paciente_mais_novo is None or paciente['Idade'] < paciente_mais_novo:
+        paciente_mais_novo = paciente['Idade']
     
 while True : 
     

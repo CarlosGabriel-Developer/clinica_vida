@@ -1,5 +1,6 @@
 from cadastro import cadastro_paciente
 from estatisticas import ver_estisticas
+from busca import buscar_paciente
 
 print ("-"*40)
 
@@ -23,8 +24,8 @@ while True :
         ver_estisticas()
         
     elif Usuario_escolha == '3' : 
-        pass
-    
+        buscar_paciente()
+        
     elif Usuario_escolha == '4' :
         pass
         

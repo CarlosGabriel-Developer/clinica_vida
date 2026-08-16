@@ -1,6 +1,7 @@
-def cadastro_paciente(nome,telefone,ano_nascimento) :
+banco_dados_pacientes = []
+
+def cadastro_paciente() :
     
-    banco_dados_pacientes = [], 
     paciente = {}
     
     from datetime import datetime
@@ -21,15 +22,18 @@ def cadastro_paciente(nome,telefone,ano_nascimento) :
         
         else : 
             print('ANO DE NASCIMENTO INVÁLIDO')
-            
-    telefone = input('Digite o telefone apenas com números: ')
-
-    if telefone.isdigit() and len(telefone) == 11:
-        print('Telefone válido')
-        paciente['Telefone'] = telefone
+    
+    while True :
         
-    else:
-        print('Telefone inválido')
+        telefone = input('Digite o telefone apenas com números: ')
+
+        if telefone.isdigit() and len(telefone) == 11:
+            print('Telefone válido')
+            paciente['Telefone'] = telefone
+            break
+            
+        else:
+            print('Telefone inválido,Digite novamente')
             
     banco_dados_pacientes.append(paciente)
         

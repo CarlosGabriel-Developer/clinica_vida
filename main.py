@@ -1,3 +1,4 @@
+from cadastro import cadastro_paciente
 
 print ("-"*40)
 
@@ -9,6 +10,29 @@ print('[4] LISTA DE TODOS OS PACIENTES')
 print('[5] SAIR')
 
 print ("-"*40)
+
+while True :
+    
+    Usuario_escolha = str(input('Escolha um opção: '))
+    
+    if Usuario_escolha == '1' : 
+        cadastro_paciente()
+        
+    elif Usuario_escolha == '2' :
+        pass
+        
+    elif Usuario_escolha == '3' : 
+        pass
+    
+    elif Usuario_escolha == '4' :
+        pass
+        
+    elif Usuario_escolha == '5' : 
+        break
+    
+    else:
+        print('Opção invalida')
+
 
 
 print ("-"*40)

@@ -1,19 +1,24 @@
 from cadastro import cadastro_paciente
-from estatisticas import ver_estisticas
+from estatisticas import ver_estatisticas
 from busca import buscar_paciente
+from paciente import lista_pacientes
 
-print ("-"*40)
+def menu():
+    
+    print ("-"*40)
 
-print("=== SISTEMA CLÍNICA VIDA+ ===")
-print('[1] CADASTRAR PACIENTE')
-print('[2] VER ESTATÍSTICAS')
-print('[3] BUSCAR PACIENTE')
-print('[4] LISTA DE TODOS OS PACIENTES')
-print('[5] SAIR')
+    print("=== SISTEMA CLÍNICA VIDA+ ===")
+    print('[1] CADASTRAR PACIENTE')
+    print('[2] VER ESTATÍSTICAS')
+    print('[3] BUSCAR PACIENTE')
+    print('[4] LISTA DE TODOS OS PACIENTES')
+    print('[5] SAIR')
 
-print ("-"*40)
+    print ("-"*40)
 
 while True :
+    
+    menu()
     
     Usuario_escolha = str(input('Escolha um opção: '))
     
@@ -21,20 +26,18 @@ while True :
         cadastro_paciente()
         
     elif Usuario_escolha == '2' :
-        ver_estisticas()
+        ver_estatisticas()
         
     elif Usuario_escolha == '3' : 
         buscar_paciente()
         
     elif Usuario_escolha == '4' :
-        pass
+        lista_pacientes()
         
     elif Usuario_escolha == '5' : 
         break
     
     else:
         print('Opção invalida')
-
-
 
 print ("-"*40)

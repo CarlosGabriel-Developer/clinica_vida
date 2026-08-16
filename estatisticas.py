@@ -1,6 +1,6 @@
 from banco_dados import banco_dados_pacientes
 
-def ver_estisticas():
+def ver_estatisticas():
     
     if len(banco_dados_pacientes) == 0:
         print('Nenhum paciente foi cadastrado')

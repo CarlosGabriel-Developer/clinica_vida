@@ -1,4 +1,5 @@
 from cadastro import cadastro_paciente
+from estatisticas import ver_estisticas
 
 print ("-"*40)
 
@@ -19,7 +20,7 @@ while True :
         cadastro_paciente()
         
     elif Usuario_escolha == '2' :
-        pass
+        ver_estisticas()
         
     elif Usuario_escolha == '3' : 
         pass

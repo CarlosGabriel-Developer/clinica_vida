@@ -1,4 +1,5 @@
-banco_dados_pacientes = []
+
+from banco_dados import banco_dados_pacientes
 
 def cadastro_paciente() :
     

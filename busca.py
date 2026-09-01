@@ -4,7 +4,7 @@ def buscar_paciente():
     
     nome_desejado = str(input('Buscar o paciente: ')).strip().lower()
     
-    encotrado = False
+    encontrado = False
     
     for paciente in banco_dados_pacientes :
         

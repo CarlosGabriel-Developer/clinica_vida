@@ -8,8 +8,15 @@ def cadastro_paciente() :
     from datetime import datetime
     ano_atual = datetime.now().year
     
-    nome = str(input('Nome do paciente: ')).capitalize()
-    paciente['Nome'] = nome
+    while True : 
+        
+        nome = str(input('Nome do paciente: ')).strip()
+        
+        if nome : 
+            paciente['Nome'] = nome.capitalize()
+            break
+        
+        print('O nome não pode ficar vazio')
 
     while True : 
 
@@ -26,7 +33,12 @@ def cadastro_paciente() :
     
     while True :
         
-        telefone = input('Digite o telefone apenas com números: ')
+        try : 
+        
+            telefone = input('Digite o telefone apenas com números: ')
+            
+        except : 
+            print('Erro,tente novamente')
 
         if telefone.isdigit() and len(telefone) == 11:
             print('Telefone válido')

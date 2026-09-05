@@ -34,7 +34,8 @@ while True :
     elif Usuario_escolha == '4' :
         lista_pacientes()
         
-    elif Usuario_escolha == '5' : 
+    elif Usuario_escolha == '5' :
+        print('Fim do programa, volte sempre')
         break
     
     else:

@@ -20,25 +20,27 @@ def cadastro_paciente() :
 
     while True : 
 
-        ano_nascimento = int(input('Ano de nacimento do paciente: '))
+        try :
+            
+            ano_nascimento = int(input('Ano de nacimento do paciente: '))
+            
+            idade_atual_paciente = ano_atual - ano_nascimento
+            
+            if 0 <=idade_atual_paciente <= 120 : 
+                paciente['Idade'] = idade_atual_paciente
+                break
+            
+            else : 
+                print('ANO DE NASCIMENTO INVÁLIDO')
+                
+        except ValueError :
+            print('Digite apenas números.')
         
-        idade_atual_paciente = ano_atual - ano_nascimento
-        
-        if 0 <=idade_atual_paciente <= 120 : 
-            paciente['Idade'] = idade_atual_paciente
-            break
-        
-        else : 
-            print('ANO DE NASCIMENTO INVÁLIDO')
-    
     while True :
         
-        try : 
-        
-            telefone = input('Digite o telefone apenas com números: ')
+        telefone = input('Digite o telefone apenas com números: ')
             
-        except : 
-            print('Erro,tente novamente')
+        print('Erro,tente novamente')
 
         if telefone.isdigit() and len(telefone) == 11:
             print('Telefone válido')
